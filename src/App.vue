@@ -14,4 +14,5 @@ export default {
 
 <style lang="scss">
 @import "~bulma/css/bulma.css";
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:700);
 </style>

@@ -1,2 +1,1 @@
-# corona-info
-website while quarantined 
+#Corona
