@@ -16,4 +16,7 @@ app.get('/data', (req,res) => {
     console.error('Error:', error);
   });
 });
+
+
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
