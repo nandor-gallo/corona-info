@@ -197,7 +197,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
   left: 21%;
   top: 11%;
   height: 5%;
-  width: 5%;
+  width: 4%;
   font-size: 200%;
   text-align: center;
 }
