@@ -5,10 +5,10 @@
         <ul>
           <h1 class="title">CoronaCo.info</h1>
           <span class="sideBarBurger" v-on:click="openNav" v-bind:style="sideBarBurgerStyle">&#9776;</span>
-          <a class="navRoutes" href="#home" id="home"> Home </a>
-          <a class="navRoutes" href="#news" id="news"> News </a>
-          <a class="navRoutes" href="http://localhost:8080/Statistics"> Statistics </a>
-          <a class="navRoutes"> Preventions </a>
+          <router-link class="navRoutes" to="/"> Home </router-link>
+          <router-link class="navRoutes" to="/test"> News </router-link>
+          <router-link class="navRoutes" to="/stats"> Statistics </router-link>
+          <router-link class="navRoutes" to="/test"> Preventions </router-link>
 
         </ul>
       </div>
@@ -40,16 +40,6 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 
 
 
-.main{
-  background-image: url('/images/background.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  height: inherit;
-  font-family: 'Ubuntu', sans-serif;
-  height: 10000px;
-
-}
 .nav .title{
   float: left;
   color: white;

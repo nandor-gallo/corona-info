@@ -50,7 +50,8 @@ $distance: 8px;
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 .main {
-  background-image: url("/images/background.jpg");
+  //background-image: url("/images/background.jpg");
+  background-color: grey;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -197,13 +198,6 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   color: red;
 }
 
-.body {
-  color: white;
-  height: 60%;
-  width: 80%;
-  margin-left: 20%;
-  padding: 100px;
-}
 .articleBorder {
   background-color: #111;
   background-clip: border-box;
