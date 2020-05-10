@@ -1,14 +1,14 @@
 <template>
   <div>
     <div class="body">
-      <div class="main">
-        <h1>Country</h1>
-        <h6>Country Code</h6>
+      <div class="main" v-for="item in countries.Countries">
+        <h1>{{ item.Country }}</h1>
+
+        <h6>{{ item.CountryCode }}</h6>
         <br />
-        <h2>Confirmed Cases</h2>
-        <h2>Total Recoverd</h2>
-        <h2>Total Deaths</h2>
-        <p>{{ countryName }}</p>
+        <h2>Confirmed Cases: {{ item.TotalConfirmed }}</h2>
+        <h2>Total Recoverd: {{ item.TotalRecovered }}</h2>
+        <h2>Total Deaths: {{ item.TotalDeaths }}</h2>
       </div>
     </div>
   </div>
@@ -29,7 +29,6 @@ export default {
   data: function() {
     return {
       countries: [],
-      countryName: "Hello",
     };
   },
   computed: {
@@ -74,13 +73,6 @@ export default {
     fetch("http://localhost:3000/data")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        console.log(data.Countries[0]);
-        console.log(data.Countries[0].Country);
-        console.log(data.Countries[0].CountryCode);
-        console.log(data.Countries[0].TotalConfirmed);
-        console.log(data.Countries[0].TotalDeaths);
-        console.log(data.Countries[0].TotalRecovered);
         this.countries = data;
         console.log(this.countries);
       });

@@ -28,9 +28,6 @@ app.get("/data", (req, res) => {
     .then((data) => {
       console.log("Success:", data);
       res.send(data);
-    })
-    .catch((error) => {
-      console.error("Error:", error);
     });
 });
 
