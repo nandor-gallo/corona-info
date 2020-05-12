@@ -24,7 +24,7 @@
           </p>
           <footer class="LCS">
             <span>
-              <i class="fas fa-heart"></i>
+              <i class="fas fa-heart" v-on:click="handleLikeClick(story)"></i>
               {{ story.likes }}
             </span>
             <span>
@@ -329,6 +329,9 @@ export default {
         this.listDropStyle.visibility = "visible";
         this.listDropStyle.opacity = "100%";
       }
+    },
+    handleLikeClick: function(story) {
+      story.likes++;
     },
   },
 };

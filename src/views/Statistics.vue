@@ -31,50 +31,15 @@ export default {
       countries: [],
     };
   },
-  computed: {
-    sortByLikes: function() {
-      function compare(a, b) {
-        let comp = 0;
-        if (a.likes > b.likes) {
-          return -1;
-        } else if (a.likes < b.likes) {
-          return 1;
-        }
-        return 0;
-      }
-      return this.stories.sort(compare);
-    },
-    sortByShares: function() {
-      function compare(a, b) {
-        let comp = 0;
-        if (a.shares > b.shares) {
-          return -1;
-        } else if (a.shares < b.shares) {
-          return 1;
-        }
-        return 0;
-      }
-      return this.stories.sort(compare);
-    },
-    sortByComments: function() {
-      function compare(a, b) {
-        let comp = 0;
-        if (a.comments > b.comments) {
-          return -1;
-        } else if (a.comments < b.comments) {
-          return 1;
-        }
-        return 0;
-      }
-      return this.stories.sort(compare);
-    },
-  },
+  computed: {},
   mounted: function() {
     fetch("http://localhost:3000/data")
       .then((res) => res.json())
       .then((data) => {
         this.countries = data;
-        console.log(this.countries);
+      })
+      .catch((err) => {
+        console.log(err);
       });
   },
   methods: {
